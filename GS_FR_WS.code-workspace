@@ -16,7 +16,7 @@
 		  "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
 		  "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
 		  "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-		  "CRS.ObjectNamePrefix": "GSUK",
+		  "CRS.ObjectNamePrefix": "GSFR",
 		  "CRS.ObjectNameSuffix": "",
 		  "CRS.RemovePrefixFromFilename": true,
 		  "al.enableCodeActions": true,
