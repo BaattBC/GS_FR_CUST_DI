@@ -2,7 +2,7 @@
   "id": "4113aa63-3f37-40f4-ac9c-c0b55fc16fd1",
   "name": "GS_FR_CUST_DI",
   "publisher": "Danube Island",
-  "version": "26.0.250926.1002",
+  "version": "26.0.251001.1001",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -16,6 +16,12 @@
       "publisher": "Microsoft",
       "name": "FEC Audit File",
       "version": "26.5.38752.38944"
+    },
+    {
+      "id": "dfd18afd-9f4a-4e1a-849f-010e5e975079",
+      "publisher": "Tetra Business Solutions Kft.",
+      "name": ">Partner Settlement Management",
+      "version": "1.2.20250926.1"
     }
   ],
   "screenshots": [],
