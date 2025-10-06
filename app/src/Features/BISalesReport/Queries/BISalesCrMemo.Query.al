@@ -12,6 +12,9 @@ query 50203 "GSFR BI Sales Cr. Memo"
             column(Document_No_; "No.")
             {
             }
+            column(Pre_Assigned_No_; "Pre-Assigned No.")
+            {
+            }
             column(External_Document_No_; "External Document No.") { }
             column(Sell_to_Customer_No_; "Sell-to Customer No.")
             { }
@@ -74,6 +77,11 @@ query 50203 "GSFR BI Sales Cr. Memo"
                     { }
                     column(Customer_Name; Customer_Name)
                     { }
+                    column(Sales_Document_RecID; "Sales Document RecID")
+                    { }
+                    column(Product_Code; Product_Code)
+                    { }
+
                 }
             }
         }

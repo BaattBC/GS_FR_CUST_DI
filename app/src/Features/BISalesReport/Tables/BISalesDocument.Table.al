@@ -123,6 +123,8 @@ table 50201 "GSFR BI Sales Document"
         {
             Caption = 'Net Amount';
         }
+        field(220; "Product Code"; Code[20])
+        { }
         field(300; SDSytemCreatedAt; DateTime)
         {
             Caption = 'DSSytemCreatedAt';

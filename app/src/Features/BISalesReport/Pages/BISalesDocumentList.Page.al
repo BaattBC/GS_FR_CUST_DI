@@ -108,6 +108,8 @@ page 50201 "GSFR BI Sales Document List"
                 { }
                 field("PS Customer_Name"; Rec."PS Customer_Name")
                 { }
+                field("Product Code"; Rec."Product Code")
+                { }
                 field(SourceSystemID; Rec.SourceSystemID)
                 { }
                 field(SDSytemCreatedAt; Rec.SDSytemCreatedAt)
@@ -128,6 +130,10 @@ page 50201 "GSFR BI Sales Document List"
 
         if SalesInvoice.Open() then begin
             while SalesInvoice.Read() do begin
+                // Only include records where Sales Document RecID matches the expected format using Pre-Assigned No.
+                if Format(SalesInvoice.Sales_Document_RecID) <> 'Sales Line: Invoice,' + SalesInvoice.Pre_Assigned_No_ + ',' + format(SalesInvoice.Line_No_) then
+                    continue;
+
                 Rec.Init();
                 RowCounter += 1;
                 Rec.RowNo := RowCounter;
@@ -157,6 +163,7 @@ page 50201 "GSFR BI Sales Document List"
                     Rec."Salesperson Name" := Salesperson.Name;
                 Rec."PS Customer_ID" := SalesInvoice.Customer_ID;
                 Rec."PS Customer_Name" := SalesInvoice.Customer_Name;
+                Rec."Product Code" := SalesInvoice.Product_Code;
                 Rec.SDSytemCreatedAt := SalesInvoice.SystemCreatedAt;
                 Rec.Insert();
             end;
@@ -165,6 +172,10 @@ page 50201 "GSFR BI Sales Document List"
 
         if SalesCrMemo.Open() then begin
             while SalesCrMemo.Read() do begin
+                // Only include records where Sales Document RecID matches the expected format using Pre-Assigned No.
+                if Format(SalesCrMemo.Sales_Document_RecID) <> 'Sales Line: Credit Memo,' + SalesCrMemo.Pre_Assigned_No_ + ',' + format(SalesCrMemo.Line_No_) then
+                    continue;
+
                 Rec.Init();
                 RowCounter += 1;
                 Rec.RowNo := RowCounter;
@@ -194,6 +205,7 @@ page 50201 "GSFR BI Sales Document List"
                     Rec."Salesperson Name" := Salesperson.Name;
                 Rec."PS Customer_ID" := SalesCrMemo.Customer_ID;
                 Rec."PS Customer_Name" := SalesCrMemo.Customer_Name;
+                Rec."Product Code" := SalesCrMemo.Product_Code;
                 Rec.SDSytemCreatedAt := SalesCrMemo.SystemCreatedAt;
                 Rec.Insert();
             end;
