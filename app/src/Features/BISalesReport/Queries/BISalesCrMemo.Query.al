@@ -81,6 +81,10 @@ query 50203 "GSFR BI Sales Cr. Memo"
                     { }
                     column(Product_Code; Product_Code)
                     { }
+                    column(Entry_Source; Entry_Source)
+                    { }
+                    column(Order_Type; Order_Type)
+                    { }
 
                 }
             }

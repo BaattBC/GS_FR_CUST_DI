@@ -81,6 +81,11 @@ query 50202 "GSFR BI Sales Invoice"
                     { }
                     column(Product_Code; Product_Code)
                     { }
+                    column(Entry_Source; Entry_Source)
+                    {
+                    }
+                    column(Order_Type; Order_Type)
+                    { }
                 }
             }
         }

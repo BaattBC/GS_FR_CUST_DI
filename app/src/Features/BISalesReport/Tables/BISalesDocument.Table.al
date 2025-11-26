@@ -124,7 +124,17 @@ table 50201 "GSFR BI Sales Document"
             Caption = 'Net Amount';
         }
         field(220; "Product Code"; Code[20])
-        { }
+        {
+            Caption = 'Product Name';
+        }
+        field(230; Entry_Source; enum "TTR CA Entry Source")
+        {
+            Caption = 'Entry Source';
+        }
+        field(240; "Order Type"; Text[50])
+        {
+            Caption = 'Order Type';
+        }
         field(300; SDSytemCreatedAt; DateTime)
         {
             Caption = 'DSSytemCreatedAt';

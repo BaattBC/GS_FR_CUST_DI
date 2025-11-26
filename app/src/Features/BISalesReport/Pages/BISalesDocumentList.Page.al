@@ -112,6 +112,14 @@ page 50201 "GSFR BI Sales Document List"
                 { }
                 field(SourceSystemID; Rec.SourceSystemID)
                 { }
+                field(Enty_Source; Rec.Entry_Source)
+                {
+                    ToolTip = 'Specifies the value of the Enty Source field.';
+                }
+                field("Order Type"; Rec."Order Type")
+                {
+                    ToolTip = 'Specifies the value of the Order Type field.';
+                }
                 field(SDSytemCreatedAt; Rec.SDSytemCreatedAt)
                 {
                     ToolTip = 'Specifies the value of the SystemCreatedAt field.';
@@ -164,6 +172,8 @@ page 50201 "GSFR BI Sales Document List"
                 Rec."PS Customer_ID" := SalesInvoice.Customer_ID;
                 Rec."PS Customer_Name" := SalesInvoice.Customer_Name;
                 Rec."Product Code" := SalesInvoice.Product_Code;
+                Rec."Entry_Source" := SalesInvoice.Entry_Source;
+                Rec."Order Type" := SalesInvoice.Order_Type;
                 Rec.SDSytemCreatedAt := SalesInvoice.SystemCreatedAt;
                 Rec.Insert();
             end;
@@ -206,6 +216,8 @@ page 50201 "GSFR BI Sales Document List"
                 Rec."PS Customer_ID" := SalesCrMemo.Customer_ID;
                 Rec."PS Customer_Name" := SalesCrMemo.Customer_Name;
                 Rec."Product Code" := SalesCrMemo.Product_Code;
+                Rec."Entry_Source" := SalesCrMemo.Entry_Source;
+                Rec."Order Type" := SalesCrMemo.Order_Type;
                 Rec.SDSytemCreatedAt := SalesCrMemo.SystemCreatedAt;
                 Rec.Insert();
             end;
